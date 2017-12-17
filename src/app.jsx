@@ -1,34 +1,58 @@
-console.log('App.js is running!');
+console.log('App.js is running!!');
 
-var myObb = {
-  title: '',
-  age: 18,
-  subtitle: 'Subtitle',
-  location: 'Portsmouth',
-  password: 'Password, duh',
-  options: [
-    'One',
-    'Two',
-  ]
-}
+const app = {
+  title: 'Indecision App',
+  subtitle: 'Put your life in the hands of the mistGods',
+  options: ['Mike', 'Paul', 'David', 'Gary', 'Test'],
+};
 
-function getLocation(location) {
-  if (location) {
-    return <p>Location: {location}</p>;
+const onFormSubmit = (e) => {
+  e.preventDefault();
+
+  const option = e.target.elements.option.value;
+  if (option) {
+    app.options.push(option);
+    e.target.elements.option.value = '';
   }
+  render();
+};
+
+const onRemoveAll = () => {
+  app.options = [];
+  render();
+};
+
+const onHandleChoice = () => {
+  const randomNumber = Math.floor(Math.random() * app.options.length);
+  const choice = (app.options[randomNumber]);
+  console.log(choice);
+};
+
+const appRoot = document.getElementById('app');
+
+const render = () => {
+  const template = (
+    <div>
+      <h1>{app.title}</h1>
+      {app.subtitle && <p>{app.subtitle}</p>}
+      <p>{app.options.length > 0 ? 'Here are your options' : 'No options'}</p>
+      <button disabled={app.options.length === 0} onClick={onHandleChoice}>What should I do?</button>
+      <p>{app.options.length}</p>
+      <button onClick={onRemoveAll}>Remove All</button>
+      <ol>
+        {
+          app.options.map((textValue, i) => <li key={i}>{textValue}</li>)
+        }
+      </ol>
+      <form onSubmit={onFormSubmit}>
+        <input type="text" name="option"/>
+        <button>Add Option</button>
+      </form>
+    </div>
+  )
+
+  ReactDOM.render(template, appRoot);
 }
 
-var template = (
-  <div>
-    <h1>{myObb.title ? myObb.title : "None entered" }</h1>
-    {myObb.subtitle && <p>{myObb.subtitle}</p>}
-    <p>{myObb.options.length >0 ? "Some options" : "No options" }</p>
-    {getLocation(myObb.location)}
-    {(myObb && myObb.age >= 18) && myObb.age}
-    <p>Password: {myObb.password}</p>
-  </div>
-    );
+render();
 
-var appRoot = document.getElementById('app');
-
-ReactDOM.render(template, appRoot);
