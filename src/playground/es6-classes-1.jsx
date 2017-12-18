@@ -19,12 +19,36 @@ class Student extends Person {
   hasMajor() {
     return !!this.major;
   }
+  getDescription() {
+    let description = super.getDescription();
+
+    if (!!this.hasMajor()) {
+      description += ` Their major is ${this.major}`;
+    }
+    return description;
+  }
 }
 
-const me = new Student('Mike Allen', 47, 'Coder');
+class Traveller extends Person {
+  constructor(name, age, major, homeLocation) {
+    super(name, age);
+    this.homeLocation = homeLocation;
+  }
 
-console.log(me.hasMajor());
+  getGreeting() {
+    let greeting = super.getGreeting();
 
-const other = new Student();
-console.log(other.hasMajor());
+    if (this.homeLocation) {
+      greeting += ` is travelling from ${this.homeLocation}`;
+    }
+    return greeting;
+  }
+}
+
+const me = new Traveller('Mike Allen', 47, 'Coder', 'Portsmouth');
+
+console.log(me.getGreeting());
+
+const other = new Traveller();
+console.log(other.getGreeting());
 
