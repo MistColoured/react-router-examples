@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import AddOption from './AddOption.jsx';
 import Action from './Action.jsx';
 import Header from './Header.jsx';
 import Options from './Options.jsx';
+import OptionModal from './OptionModal.jsx';
 
-export default class IndecisionApp extends React.Component {
+export default class IndecisionApp extends Component {
   state = {
-    options: []
+    options: [],
+    selectedOption: undefined,
   };
   handleDeleteOptions = () => {
     this.setState(() => ({
@@ -21,7 +23,10 @@ export default class IndecisionApp extends React.Component {
   };
   handlePick = () => {
     const randomNum = Math.floor(Math.random() * this.state.options.length);
-    console.log(this.state.options[randomNum]);
+    const option = this.state.options[randomNum];
+    this.setState(() => ({
+      selectedOption: option,
+    }));
   };
   handleAddOption = (option) => {
     if (!option) {
@@ -31,6 +36,11 @@ export default class IndecisionApp extends React.Component {
     }
     this.setState((prevState) => ({
       options: prevState.options.concat([option]),
+    }));
+  };
+  handleClearSelectedOption = () => {
+    this.setState(() => ({
+      selectedOption: undefined
     }));
   };
   componentDidMount() {
@@ -60,6 +70,10 @@ export default class IndecisionApp extends React.Component {
         />
         <AddOption
           handleAddOption={this.handleAddOption}
+        />
+        <OptionModal
+          selectedOption={this.state.selectedOption}
+          handleClearSelectedOption={this.handleClearSelectedOption}
         />
       </div>
     );
