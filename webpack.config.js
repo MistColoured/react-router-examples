@@ -1,18 +1,18 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/app.jsx',
+  entry: './src/playground/redux-101.jsx',
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [{
       loader: 'babel-loader',
-      test: /\.jsx/,
+      test: /\.jsx?$/,
       exclude: /node_modules/
     }, {
-      test: /\.scss$/,
+      test: /\.s?css$/,
       use: [
         'style-loader',
         'css-loader',
@@ -22,7 +22,8 @@ module.exports = {
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public')
+    contentBase: path.join(__dirname, 'public'),
+    historyApiFallback: true
   }
 };
 
