@@ -5,6 +5,6 @@ const HomePage = () => (
     <h1>Welcome to Home Page</h1>
     <p>This is my site</p>
   </div>
-)
+);
 
 export default HomePage;

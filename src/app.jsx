@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { BrowserRouter } from 'react-router-dom';
+
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-import BasicExample from './Playground/OfficialRouting.jsx';
+import App from './MediumTutorial/MediumTutorial.jsx';
 
 // // import './firebase/firebase';
 // import './axios/axios';
 
-ReactDOM.render(<BasicExample />, document.getElementById('app'));
+/* global document */
+
+ReactDOM.render(
+  (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  ), document.getElementById('app'),
+);
