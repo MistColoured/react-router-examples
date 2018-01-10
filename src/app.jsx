@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-import App from './MediumTutorial/MediumTutorial.jsx';
+import App from './MediumTutorial/components/App.jsx';
 
 // // import './firebase/firebase';
 // import './axios/axios';
