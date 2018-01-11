@@ -6,10 +6,13 @@ import Player from './Player';
 // The Roster component matches one of two different routes
 // depending on the full pathname
 const Roster = () => (
+  <div>
+    <h2>This is the roster page!</h2>
     <Switch>
-        <Route exact path='/roster' component={ FullRoster }/>
-        <Route path='/roster/:number' component={ Player }/>
+      <Route exact path='/roster' component={ FullRoster } />
+      <Route path='/roster/:number' component={ Player } />
     </Switch>
+  </div>
 );
 
 export default Roster;

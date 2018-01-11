@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Schedule = () => (
   <div>
@@ -8,6 +8,6 @@ const Schedule = () => (
       <li>6/14 @ United</li>
     </ul>
   </div>
-)
+);
 
-export default Schedule
+export default Schedule;
