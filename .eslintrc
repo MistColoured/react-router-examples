@@ -8,8 +8,8 @@
     "extends": "airbnb",
     "parser": "babel-eslint",
     "rules": {
-//        // indentation
-//        "indent": [ 2, 4 ],
+        // indentation
+        "indent": [ 2, 4 ],
 
         // spacing
         "space-in-parens": [ 2, "never" ],

@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 
 import { BrowserRouter } from 'react-router-dom';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-import App from './MediumTutorial/components/App';
+import App from './SitePoint/App';
 
 // // import './firebase/firebase';
 // import './axios/axios';
@@ -14,9 +14,9 @@ import App from './MediumTutorial/components/App';
 /* global document */
 
 ReactDOM.render(
-  (
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  ), document.getElementById('app'),
+    (
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    ), document.getElementById('app'),
 );

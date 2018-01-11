@@ -7,9 +7,7 @@ import PlayerAPI from '../api';
 // the URL's pathname. If no player is found with the given
 // number, then a "player not found" message is displayed.
 const Player = (props) => {
-    const player = PlayerAPI.get(
-        parseInt(props.match.params.number, 10),
-    );
+    const player = PlayerAPI.get(parseInt(props.match.params.number, 10));
     if (!player) {
         return <div>Sorry, but the player was not found</div>;
     }
