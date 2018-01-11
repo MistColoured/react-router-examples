@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 
 import { BrowserRouter } from 'react-router-dom';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-import App from './MediumTutorial/components/App.jsx';
+import App from './MediumTutorial/components/App';
 
 // // import './firebase/firebase';
 // import './axios/axios';
