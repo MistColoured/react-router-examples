@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PlayerAPI from '../api';
+import PlayerAPI from './api';
 
 // The FullRoster iterates over all of the players and creates
 // a link to their profile page.

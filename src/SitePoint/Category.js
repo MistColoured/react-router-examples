@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom';
 
 const Category = ({ match }) => (
     <div>
+        {match.path} {match.url}
         <ul>
             <li><Link to={ `${ match.url }/shoes` }>Shoes</Link></li>
             <li><Link to={ `${ match.url }/boots` }>Boots</Link></li>

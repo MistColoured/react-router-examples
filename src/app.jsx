@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-import App from './SitePoint/App';
+import App from './MyRoutes/App';
 
 // // import './firebase/firebase';
 // import './axios/axios';

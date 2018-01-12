@@ -31,6 +31,7 @@ class App extends Component {
                 </nav>
 
                 <Switch>
+
                     <Route exact path='/' component={ Home } />
                     <Route path='/category' component={ Category } />
                     <Route path='/products' component={ Products } />
