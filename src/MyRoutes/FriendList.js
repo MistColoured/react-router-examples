@@ -8,14 +8,14 @@ const FriendList = () => (
     <div>
         <ul>
             { PlayerAPI.all().map(p => (
-                <li key={p.number}>
-                    <Link to={`/contact/${p.number}`}>
+                <li key={ p.number }>
+                    <Link to={ `/contacts/${ p.number }` }>
                         Dave
                     </Link>
                 </li>
             ))}
         </ul>
     </div>
-)
+);
 
 export default FriendList;
