@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 import PlayerAPI from './api';
 
 const Friend = (props) => {
-    const friend = PlayerAPI.get(parseInt(props.match.params.number, 10));
+    const friend = PlayerAPI.get(parseInt(props.match.params.number));
     if (!friend) {
-        <p>No!!!</p>
+        return <div>Nope!</div>
     }
-    return <div>{ friend.job}
+    return (
+    <div>
+        { friend.job }
         <p><Link to='/contact'>Back</Link></p>
     </div>
-
+    )
 };
 
 export default Friend;

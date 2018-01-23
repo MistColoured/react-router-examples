@@ -8,12 +8,14 @@ import Contact from './Contact';
 import NoMatch from './NoMatch';
 
 const Main = () => (
-    <Switch>
-        <Route exact path='/' component={ Home } />
-        <Route path='/about' component={ About } />
-        <Route path='/contact' component={ Contact } />
-        <Route component={ NoMatch } />
-    </Switch>
+    <main>
+        <Switch>
+            <Route exact path='/' component={ Home } />
+            <Route path='/about' component={ About } />
+            <Route path='/contact' component={ Contact } />
+            <Route component={ NoMatch } />
+        </Switch>
+    </main>
 );
 
 export default Main;
