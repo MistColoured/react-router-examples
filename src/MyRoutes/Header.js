@@ -5,9 +5,9 @@ import { Link, NavLink } from 'react-router-dom';
 const Header = () => (
     <header>
         <ul>
-            <li><NavLink exact to='/' activeStyle={{ color: 'blue'}}>Home</NavLink></li>
-            <li><NavLink exact to='/about' activeStyle={{ color: 'blue'}}>About</NavLink></li>
-            <li><NavLink exact to='/contact' activeStyle={{ color: 'blue'}}>Contact</NavLink></li>
+            <li><NavLink exact activeStyle={{ color: 'blue' }} to='/'>Home</NavLink></li>
+            <li><NavLink activeStyle={{ color: 'blue' }} to='/about'>About</NavLink></li>
+            <li><NavLink activeStyle={{ color: 'blue' }} to='/contact'>Contact</NavLink></li>
         </ul>
     </header>
 );
