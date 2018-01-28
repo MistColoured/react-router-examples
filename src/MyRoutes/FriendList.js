@@ -7,10 +7,10 @@ import PlayerAPI from './api';
 const FriendList = () => (
     <div>
         <ul>
-            { PlayerAPI.all().map(p => (
+            {PlayerAPI.all().map(p => (
                 <li key={ p.number }>
-                    <Link to={ `/contact/${ p.number }`}>
-                        { p.name }
+                    <Link to={ `/contact/${ p.number }` }>
+                        {p.name}
                     </Link>
                 </li>
             ))}
