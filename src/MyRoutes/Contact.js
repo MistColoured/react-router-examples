@@ -8,7 +8,7 @@ import Friend from './Friend';
 const Contact = () => (
     <switch>
         <Route exact path='/contact' component={ FriendList} />
-        <Route path='/contact/:number' component={ Friend } />
+        <Route path='/contact/:number' component={ Friend} />
     </switch>
 );
 

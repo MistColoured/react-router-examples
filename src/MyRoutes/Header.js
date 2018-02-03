@@ -3,13 +3,13 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => (
-    <header>
+    <div>
         <ul>
             <li><NavLink activeStyle={{ color: 'blue' }} exact to='/'>Home</NavLink></li>
-            <li><NavLink to='/about' activeStyle={{ color: 'blue' }}>About</NavLink></li>
-            <li><NavLink to='/contact' activeStyle={{ color: 'blue' }}>Contact</NavLink></li>
+            <li><NavLink activeStyle={{ color: 'blue' }} to='/about'>About</NavLink></li>
+            <li><NavLink activeStyle={{ color: 'blue' }} to='/contact'>Contact</NavLink></li>
         </ul>
-    </header>
+    </div>
 );
 
 export default Header;
