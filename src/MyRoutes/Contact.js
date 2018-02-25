@@ -6,10 +6,10 @@ import FriendList from './FriendList';
 import Friend from './Friend';
 
 const Contact = () => (
-    <switch>
-        <Route exact path='/contact' component={ FriendList} />
-        <Route path='/contact/:number' component={ Friend} />
-    </switch>
+    <Switch>
+        <Route exact path='/contact' component={ FriendList } />
+        <Route path='/contact/:number' component={ Friend } />
+    </Switch>
 );
 
 export default Contact;
